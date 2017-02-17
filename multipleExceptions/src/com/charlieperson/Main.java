@@ -9,9 +9,7 @@ public class Main {
 	    Test test = new Test();
 	    try {
             test.run();
-        } catch(ParseException ex){
-            System.out.println(ex.getMessage());
-        } catch(IOException ex) {
+        } catch(ParseException | IOException ex){
             System.out.println(ex.getMessage());
         }
     }
