@@ -10,4 +10,14 @@ public abstract class Machine {
     public void setId(int id) {
         this.id = id;
     }
+
+    public abstract void start();
+    public abstract void run();
+    public abstract void shutDown();
+
+    public void fullUse() {
+        start();
+        run();
+        shutDown();
+    }
 }
