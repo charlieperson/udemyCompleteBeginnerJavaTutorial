@@ -3,7 +3,7 @@ package com.charlieperson;
 public class Main {
 
     public static void main(String[] args) {
-	    Animal animal = Animal.CAT;
+	    Animal animal = Animal.DOG;
 
 	    switch (animal) {
             case DOG:
@@ -16,5 +16,7 @@ public class Main {
                 System.out.println("Animal is a mouse");
                 break;
         }
+
+        System.out.println(Animal.DOG.getName());
     }
 }
