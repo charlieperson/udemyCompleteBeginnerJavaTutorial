@@ -17,6 +17,8 @@ public class Main {
                 break;
         }
 
-        System.out.println(Animal.DOG.getName());
+        System.out.println(Animal.DOG);
+        System.out.println(Animal.CAT.name());
+        System.out.println(Animal.valueOf("DOG"));
     }
 }
