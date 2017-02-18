@@ -39,6 +39,43 @@ public class Main {
 
 		System.out.println("Tree set: \n" + set3 + "\n");
 
+//		-- ITERATION --
+		for(String element : set3) {
+			System.out.println(element);
+		}
+		System.out.println("\n");
+
+//		CONTAINS
+
+		if(set2.contains("second")) {
+			System.out.println("Contains second");
+		}
+
+//		INTERSECTION
+
+		Set<String> compareSetOne = new LinkedHashSet<>();
+		Set<String> compareSetTwo = new LinkedHashSet<>();
+
+		compareSetOne.add("Monkey");
+		compareSetOne.add("Giraffe");
+		compareSetOne.add("Seagull");
+		compareSetOne.add("Elephant");
+
+		compareSetTwo.add("John");
+		compareSetTwo.add("Cena");
+		compareSetTwo.add("Monkey");
+		compareSetTwo.add("Elephant");
+
+		Set<String> intersection = new HashSet<>(compareSetOne); // Make a copy of compareSetOne
+		intersection.retainAll(compareSetTwo);
+		System.out.println("Common elements between compareSetOne and compareSetTwo: " + intersection);
+
+//		Difference
+		Set<String> difference = new HashSet<>(compareSetOne);
+		difference.removeAll(compareSetTwo);
+		System.out.println("Elements that are in compareSetOne, but not in compareSetTwo: " + difference);
+
+
 
     }
 }
