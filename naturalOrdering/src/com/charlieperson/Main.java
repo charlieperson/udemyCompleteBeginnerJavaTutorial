@@ -5,8 +5,8 @@ import java.util.*;
 public class Main {
 
     public static void main(String[] args) {
-	    List<String> list = new ArrayList<>();
-	    SortedSet<String> set = new TreeSet<>();
+	    List<Person> list = new ArrayList<>();
+	    SortedSet<Person> set = new TreeSet<>();
 
 	    addElements(list);
 	    addElements(set);
@@ -18,17 +18,17 @@ public class Main {
         showElements(set);
     }
 
-    private static void addElements(Collection<String> col) {
-        col.add("John");
-        col.add("Mike");
-        col.add("Dan");
-        col.add("Alex");
-        col.add("Chuck");
+    private static void addElements(Collection<Person> col) {
+        col.add(new Person("John"));
+        col.add(new Person("Mike"));
+        col.add(new Person("Dan"));
+        col.add(new Person("Alex"));
+        col.add(new Person("Chuck"));
     }
 
-    private static void showElements(Collection<String> col) {
-        for(String element: col) {
-            System.out.println(element);
+    private static void showElements(Collection<Person> col) {
+        for(Person element: col) {
+            System.out.println(element.getName());
         }
     }
 }
