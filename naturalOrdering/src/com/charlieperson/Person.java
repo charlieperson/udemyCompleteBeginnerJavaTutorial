@@ -1,8 +1,5 @@
 package com.charlieperson;
 
-
-import java.util.Comparator;
-
 public class Person implements Comparable<Person>{
     private String name;
 
